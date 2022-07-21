@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarService, Day, Month } from './calendar.service';
 
 @Component({
   selector: 'goat-sports-calendar',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar.page.scss'],
 })
 export class CalendarPage implements OnInit {
-  constructor() {}
+  month!: Month;
+  constructor(private calendarService: CalendarService) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.calendarService.loadMonthData();
+    this.month = this.calendarService.month;
+  }
 }

@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="16px">
+  <div>{{ month?.monthName }}</div>
+  <div
+    gdAreas="1 2 3 4 5 6 7 | 8 9 10 11 12 13 14 | 15 16 17 18 19 20 21 | 22 23 24 25 26 27 28 | 29 30 31 32 33 34 35 | 36 37 38 39 40 41 42"
+    gdRows="48px 48px 48px 48px 48px 48px"
+    gdColumns="48px 48px 48px 48px 48px 48px 48px"
+  >
+    <div
+      *ngFor="let day of month.days; index as i"
+      class="day-container"
+      [ngClass]="day.isInCurrentMonth ? 'month' : 'disabled-month'"
+    >
+      <goat-sports-day [gdArea]="i" [day]="day">
+        {{ i }}
+      </goat-sports-day>
+    </div>
+  </div>
+</div>

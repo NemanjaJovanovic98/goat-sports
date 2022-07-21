@@ -1,0 +1,11 @@
+.disabled-month {
+  background: var(--ion-color-medium);
+  color: var(--ion-color-primary-contrast);
+}
+.month {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+}
+.day-container {
+  padding: 8px;
+}

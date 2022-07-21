@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="space-between start">
+  {{ day.date | date: 'd' }}
+  <ion-icon id="current-day-icon" name="ellipse"></ion-icon>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="end center">
+  <ion-icon *ngIf="day.reflection" color="success" name="heart"></ion-icon>
+  <ion-icon *ngIf="day.workout" color="success" name="barbell"></ion-icon>
+</div>
